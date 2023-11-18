@@ -14,6 +14,11 @@ export const HomePage = () => {
       if (e.target == numRef3.current) numRef4.current.focus();
     }
   };
+  const checkNumber = (event) => {
+    /*if (!/^(?:[0-9]|[\b])+$/.test(event.key)) {
+      event.preventDefault();
+    }*/
+  };
 
   return (
     <div className="container">
@@ -30,6 +35,7 @@ export const HomePage = () => {
             className="cardNumber"
             type="text"
             onChange={numChange}
+            onKeyDown={checkNumber}
           />
           -
           <input
@@ -39,6 +45,7 @@ export const HomePage = () => {
             className="cardNumber"
             type="text"
             onChange={numChange}
+            onKeyDown={checkNumber}
           />
           -
           <input
@@ -48,6 +55,7 @@ export const HomePage = () => {
             className="cardNumber"
             type="text"
             onChange={numChange}
+            onKeyDown={checkNumber}
           />
           -
           <input
@@ -57,6 +65,7 @@ export const HomePage = () => {
             className="cardNumber"
             type="text"
             onChange={numChange}
+            onKeyDown={checkNumber}
           />
         </p>
       </main>
